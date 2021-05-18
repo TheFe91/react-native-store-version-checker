@@ -1,6 +1,6 @@
 # react-native-store-version-checker
 
-A plugin to help you find if your React Native app needs to be updated
+A plugin who tells you when your React Native app needs to be updated
 
 ## Installation
 
@@ -24,21 +24,10 @@ import { Platform, Alert } from 'react-native';
 useEffect(() => {
     (Platform.OS === 'android' ? checkAndroidNeedsUpdate() : checkIOSNeedsUpdate()).then((shouldUpdate) => {
         if (shouldUpdate) {
-            // do stuff (open AlertDialog, block app execution...)
+            // do stuff (open AlertDialog, block app execution, ...)
         } else {
             // start your App
         }
     });
 }, []);
-```
-
-### Preview App
-
-To test your plugin on a device run the following to create a React Native app using it.
-
-```
-npm install
-npm run app
-cd app
-react-native run-ios / react-native run-android
 ```
